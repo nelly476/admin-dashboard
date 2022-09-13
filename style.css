@@ -5,6 +5,12 @@
   font-family: "Anek Telugu", sans-serif;
   font-family: "Roboto", sans-serif;
 }
+
+:root {
+  --main-color: #3581cdf6;
+  --border-color: #d1d5db;
+}
+
 .container {
   display: grid;
   grid-template-columns: 1fr 5fr;
@@ -14,14 +20,13 @@
 .dashboard {
   grid-column: 1 / 2;
   grid-row: 1 / 3;
-  background-color: #369871b5;
+  background-color: var(--main-color);
   color: white;
 }
 
 .header {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
-
   display: grid;
   grid-template-rows: 1fr 1fr;
   padding-bottom: 30px;
@@ -29,10 +34,10 @@
 
 .content {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: auto 1fr;
   grid-row: 2 / 3;
   padding: 30px;
-  background-color: #eee8dfcd;
+  background-color: #e2e8f0;
 }
 
 .dashboard_heading {
@@ -91,10 +96,11 @@
 }
 
 .search {
-  background: orangered;
+  background: #e2e8f0;
   height: 30px;
   min-width: 400px;
   border-radius: 10px;
+  border: 1px solid var(--border-color);
   flex: 1;
 }
 
@@ -123,6 +129,11 @@
   margin-top: 8px;
   width: 60px;
   height: 60px;
+}
+
+.first {
+  width: 50px;
+  height: 50px;
 }
 
 .profile_pic:hover {
@@ -157,7 +168,7 @@
 }
 
 .btn {
-  background-color: #369871b5;
+  background-color: var(--main-color);
   border: none;
   border-radius: 23px;
   color: white;
@@ -172,25 +183,26 @@
 }
 
 .btn:hover {
-  background-color: rgba(76, 175, 79, 0.443);
+  background-color: #60a5fa;
 }
 
 .cards_section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding-top: 30px;
-  row-gap: 30px;
+  gap: 30px;
   justify-content: flex-start;
+  margin: 0;
 }
 
 .card {
-  padding: 20px 20px;
+  padding: 20px;
   display: grid;
   max-width: 450px;
   background-color: white;
   border-radius: 15px;
-  border: 2px solid rgba(95, 89, 89, 0.371);
-  border-left: 10px solid orangered;
+  border: 2px solid var(--border-color);
+  border-left: 10px solid #6d28d9;
   margin: 0;
 }
 
@@ -208,4 +220,50 @@
 
 .card_icons img:hover {
   cursor: pointer;
+}
+
+.announcements_section,
+.trending_section {
+  display: grid;
+  row-gap: 30px;
+  background-color: white;
+  border-radius: 15px;
+  border: 2px solid var(--border-color);
+  padding: 50px;
+  max-width: 300px;
+  margin-top: 30px;
+}
+
+.announcements_trending {
+  display: grid;
+  justify-content: end;
+  grid-template-rows: auto 2fr auto 2fr;
+}
+
+.announcement_card {
+  display: grid;
+  row-gap: 5px;
+}
+
+.border_line p {
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 24px;
+}
+
+.trending_section {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  height: fit-content;
+  row-gap: 45px;
+  margin-top: 20px;
+}
+
+.trending_info {
+  display: grid;
+  row-gap: 20px;
+  padding-top: 20px;
+}
+
+.announcements_trending h3 {
+  padding-left: 7px;
 }
