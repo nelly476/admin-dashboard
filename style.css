@@ -280,3 +280,9 @@
 .user_info {
   padding: 0;
 }
+
+.card_info p,
+.announcement_card p,
+.info_color {
+  color: gray;
+}
