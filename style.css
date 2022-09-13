@@ -13,8 +13,8 @@
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 5fr;
-  grid-template-rows: 1fr 5fr;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
 }
 
 .dashboard {
@@ -231,7 +231,6 @@
   border: 2px solid var(--border-color);
   padding: 50px;
   max-width: 300px;
-  margin-top: 30px;
 }
 
 .announcements_trending {
